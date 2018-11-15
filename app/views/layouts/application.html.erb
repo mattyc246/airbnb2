@@ -13,27 +13,36 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "Become A Host", new_listing_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "View Listings", listings_path, class:"nav-link" %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+      </ul>
+    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <% if signed_in? -%>
+      <ul class="navbar-nav">
+        <li class="nav-item dropleft">
+          <img id="navbarDropdown" class="dropdown-toggle ml-3" src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015" style="width: 40px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          </a>
+          <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+            <%= link_to "My Profile", user_path(current_user.id), class:"dropdown-item" %>
+            <%= link_to "My Reservations", user_path(current_user.id), class:"nav-link" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to t(".sign_out"), sign_out_path, method: :delete, class:"nav-link" %>
+          </div>
         </li>
       </ul>
+      <% else -%>
       <div id="header">
-        <% if signed_in? -%>
-          <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
-        <% else -%>
           <%= link_to t(".sign_in"), sign_in_path %>
-        <% end -%>
       </div>
-    </div>
+      <% end -%>
   </nav>
 
   <div id="flash">
