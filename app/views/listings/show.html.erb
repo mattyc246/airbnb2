@@ -1,1 +1,23 @@
 <h1><%= @listing.title %>'s Page </h1>
+
+<%= form_with url: listing_reservation_path(@listing.id), scope: :reservation, local: true do |f| %>
+  <div class="field" >
+    <%= f.label :check_in %>
+    <%= f.date_select :check_in %>
+  </div>
+
+  <div class="field">
+    <%= f.label :check_out %>
+    <%= f.date_select :check_out %>
+  </div>
+
+  <div class="field" >
+    <%= f.label :guests %>
+    <%= f.text_field :guests %>
+  </div>
+
+  <div class="field" >
+    <%= f.submit "Book Now" %>
+  </div>
+
+<% end %>
