@@ -1,1 +1,128 @@
-<h1><%= @user.full_name %>'s Profile</h1>
+<div class="container">
+  <div class="card text-center m-3">
+    <div class="card-header">
+      <h2><%= @user.full_name %></h2>
+    </div>
+    <div class="card-body">
+      <img class="card-img-top w-25 m-2 rounded-circle" src="https://i0.wp.com/hifadhiafrica.org/wp-content/uploads/2017/01/default-placeholder.png" alt="Profile Photo"></br>
+      <a href="#" class="btn btn-primary">Change Profile Photo</a>
+    </div>
+    <div class="card-footer">
+      <h5 class="card-title m-2">User Details:</h5>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Full Name
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.full_name %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Email Address
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.email %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Phone Number
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.phone_number %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Address Line 1
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.address_line1 %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              City
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.city %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              State
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.state %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Postcode
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.postcode %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingEight">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              Country
+            </button>
+          </h5>
+        </div>
+        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+          <div class="card-body">
+            <%= @user.country %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
