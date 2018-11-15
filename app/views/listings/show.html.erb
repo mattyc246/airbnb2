@@ -29,17 +29,48 @@
         <hr>
         <h6 class="card-subtitle mb-2 text-muted">Key Features:</h6>
         <nav class="nav nav-pills nav-justified">
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-male"></i> <%= @listing.guests %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-shower"></i> <%= @listing.bathrooms %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-bed"></i> <%= @listing.bedrooms %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-credit-card"></i> $<%= @listing.price_per_night %>.00 / P.P.P.N</a>
+          <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-male"></i> <%= @listing.guests %></button>
+          <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-shower"></i> <%= @listing.bathrooms %></button>
+          <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-bed"></i> <%= @listing.bedrooms %></button>
+          <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-credit-card"></i> $<%= @listing.price_per_night %>.00 / P.P.P.N</button>
         </nav>
         <hr>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h4 class="card-subtitle mb-2 text-muted">Details About This Listing:</h4>
+        <h6 class="card-subtitle m-2">Address:</h6>
+        <p class="card-text">
+          <%= @listing.address_line1 %></br>
+          <%= @listing.city %></br>
+          <%= @listing.state %></br>
+          <%= @listing.postcode %></br>
+          <%= @listing.country %>
+        </p>
+        <h6 class="card-subtitle m-2">Description:</h6>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <hr>
+        <h6 class="card-subtitle m-2">Reservations Hosted At This Listing: <%= @listing.reservations.count %></h6>
+        <hr>
+        <h4 class="card-subtitle mb-2 text-muted">Reviews:</h4>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Leave A Review
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card m-1" style="width: 25rem;">
+    <div class="card m-1" style="width: 25rem; height: 15rem;">
       <div class="card-body">
         <h5 class="card-title">Book a stay now!</h5>
         <%= render partial: "new_form" %>
