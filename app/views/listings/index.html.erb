@@ -7,10 +7,10 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Search Listings:</span>
       </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Search by city, country, property type...">
     </div>
     <div class="input-group mb-3">
-      <div class="input-group-prepend" id="button-addon3">
+      <div class="input-group-prepend d-flex flex-wrap" id="button-addon3">
         <span class="input-group-text mr-3" id="inputGroup-sizing-default">Filters:</span>
         <button class="btn btn-outline-info m-1" type="button">Swimming Pool</button>
         <button class="btn btn-outline-info m-1" type="button">Laundry</button>
@@ -30,7 +30,7 @@
   </div>
 </div>
 <div class="container">
-  <div class="d-flex flex-wrap">
+  <div class="d-flex flex-wrap justify-content-center">
     <% @listings.each do |listing| %>
       <div class="card shadow m-3" style="width: 18rem;">
         <img class="card-img-top" src="https://www.rev6sports.com/wp-content/uploads/2015/04/placeholder-1000x600.png" alt="Card image cap">
