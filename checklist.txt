@@ -1,6 +1,9 @@
 AirBnB Checklist:
 
 - User Authentication With Clearance [x]
+- User profile [x]
+- Edit User []
+- Delete User []
 - User Validation []
 - Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
