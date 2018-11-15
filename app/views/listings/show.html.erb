@@ -26,12 +26,15 @@
       <div class="card-body">
         <h2 class="card-title"><%= @listing.title %></h2>
         <h6 class="card-subtitle mb-2 text-muted">Hosted By: <%= @listing.user.full_name %></h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Key Features:</h6>
         <nav class="nav nav-pills nav-justified">
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><%= @listing.guests %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><%= @listing.bathrooms %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><%= @listing.bedrooms %></a>
-          <a class="nav-item btn btn-outline-secondary m-1" href="#"><%= @listing.price_per_night %></a>
+          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-male"></i> <%= @listing.guests %></a>
+          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-shower"></i> <%= @listing.bathrooms %></a>
+          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-bed"></i> <%= @listing.bedrooms %></a>
+          <a class="nav-item btn btn-outline-secondary m-1" href="#"><i class="fas fa-credit-card"></i> $<%= @listing.price_per_night %>.00 / P.P.P.N</a>
         </nav>
+        <hr>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
     </div>
