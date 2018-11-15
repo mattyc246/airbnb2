@@ -1,4 +1,4 @@
-lass ListingsController < ApplicationController
+class ListingsController < ApplicationController
 
   def index
 
