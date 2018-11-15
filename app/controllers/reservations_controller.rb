@@ -28,4 +28,5 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:check_in, :check_out, :guests, :listing_id)
 
   end
+  
 end
