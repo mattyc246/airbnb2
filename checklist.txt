@@ -31,3 +31,4 @@ AirBnB Checklist:
 - AJAX Add Picture without refesh []
 - AJAX Display Error Message without refresh on sign in []
 - Deploy to Heroku []
+- Bootstrap & Make it pretty! []
