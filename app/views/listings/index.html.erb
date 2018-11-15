@@ -1,8 +1,38 @@
-<h1> Here are all the listings </h1>
-<div class="container" >
-  <div class="d-flex flex-wrap mx-auto">
+<div class="container-fluid" >
+  <div class="jumbotron m-2">
+    <h1 class="display-4">Stay somewhere today!</h1>
+    <p class="lead">Find your next vacation or weekend getaway with us! It will be an experience you will never forget!</p>
+    <hr class="my-4">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Search Listings:</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Search by city, country, property type...">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend d-flex flex-wrap" id="button-addon3">
+        <span class="input-group-text mr-3" id="inputGroup-sizing-default">Filters:</span>
+        <button class="btn btn-outline-info m-1" type="button">Swimming Pool</button>
+        <button class="btn btn-outline-info m-1" type="button">Laundry</button>
+        <button class="btn btn-outline-info m-1" type="button">Beach Access</button>
+        <button class="btn btn-outline-info m-1" type="button">Wifi</button>
+        <button class="btn btn-outline-info m-1" type="button">Minibar</button>
+        <button class="btn btn-outline-info m-1" type="button">Kitchen Utensils</button>
+        <button class="btn btn-outline-info m-1" type="button">Baby Cot</button>
+        <button class="btn btn-outline-info m-1" type="button">Smoke Free</button>
+        <button class="btn btn-outline-info m-1" type="button">Toiletries</button>
+        <button class="btn btn-outline-info m-1" type="button">TV</button>
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <div class="form-control"></div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex flex-wrap justify-content-center">
     <% @listings.each do |listing| %>
-      <div class="card" style="width: 18rem;">
+      <div class="card shadow m-3" style="width: 18rem;">
         <img class="card-img-top" src="https://www.rev6sports.com/wp-content/uploads/2015/04/placeholder-1000x600.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><%= listing.title %></h5>
