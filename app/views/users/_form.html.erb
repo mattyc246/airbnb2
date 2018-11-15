@@ -1,9 +1,44 @@
-<div class="text-field">
+<div class="field">
+  <%= form.label :full_name %>
+  <%= form.text_field :full_name %>
+</div>
+
+
+<div class="field">
   <%= form.label :email %>
   <%= form.text_field :email, type: 'email' %>
 </div>
 
-<div class="password-field">
+<div class="field">
   <%= form.label :password %>
   <%= form.password_field :password %>
+</div>
+
+<div class="field">
+  <%= form.label :address_line1 %>
+  <%= form.text_field :address_line1 %>
+
+<div class="field">
+  <%= form.label :city %>
+  <%= form.text_field :city %>
+</div>
+
+<div class="field">
+  <%= form.label :state %>
+  <%= form.text_field :state %>
+</div>
+
+<div class="field">
+  <%= form.label :postcode %>
+  <%= form.text_field :postcode %>
+</div>
+
+<div class="field">
+  <%= form.label :country %>
+  <%= form.select :country, options_for_select(User.country_list), placeholder:"Choose Country...", class:"input-field" %>
+</div>
+
+<div class="field">
+  <%= form.label :phone_number %>
+  <%= form.text_field :phone_number %>
 </div>
