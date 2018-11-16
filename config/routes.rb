@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :listings do
     resource :reservation, only: [:new, :create, :destroy]
+    resource :review, only:[:create, :destroy]
   end
 
   get '/reservations' => 'reservations#index', as: "reservations"

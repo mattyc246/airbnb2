@@ -50,6 +50,7 @@
         <h6 class="card-subtitle m-2">Reservations Hosted At This Listing: <%= @listing.reservations.count %></h6>
         <hr>
         <h4 class="card-subtitle mb-2 text-muted">Reviews:</h4>
+        <%= render partial: 'reviews' %>
         <div class="accordion" id="accordionExample">
           <div class="card">
             <div class="card-header" id="headingOne">
@@ -62,9 +63,12 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
-                <% form_with url: review_path do |f| %>
-                  <%= f.label "Leave a Review:" %>
-                  <%= f.text_area :review %>
+                <%= form_with url: listing_review_path(@listing.id), remote: true do |f| %>
+                <div class="field" >
+                  <%= f.label "Leave a Review:", class:"form-label" %>
+                  <%= f.text_area :review, class:'form-control' %>
+                  <%= f.submit 'Save Review', class:'btn btn-success m-2' %>
+                </div>
                 <% end %>
               </div>
             </div>
