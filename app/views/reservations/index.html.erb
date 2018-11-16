@@ -6,33 +6,21 @@
       <hr>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card text-center mx-auto" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
+          <% @reservations.each do |res| %>
           <div class="carousel-item">
             <div class="card text-center mx-auto" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"><%= res.listing.title %></h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Check In: <%= res.check_in %></li>
+                  <li class="list-group-item">Check Out: <%= res.check_out %></li>
+                  <li class="list-group-item">Guests <%= res.guests %></li>
+                </ul>
+                <%= link_to 'Cancel Reservation', listing_reservation_path(res.id), method: :delete, data: { confirm: "Are you sure you wish to cancel this reservation?" }, remote: true %>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="card text-center mx-auto" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
