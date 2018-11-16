@@ -17,17 +17,17 @@ DONE
 - Listing Reviews [x]
 - AJAX Submit Reviews [x]
 - Edit User [x]
+- Update Listing [x]
 
 
 IN PROGRESS
 ==============================
 
-- Update Listing []
+- Delete Reservation []
 
 TODO
 ==============================
 
-- Delete Reservation []
 - Verify Listing []
 - User Validation []
 - Listing Validations []
@@ -44,7 +44,7 @@ TODO
 - Mailers []
 - Sidekiq []
 - Redis []
-- Multithreading With Sidekiq & Redit []
+- Multithreading With Sidekiq & Redis []
 - Search with multiple filters []
 - AJAX Autocomplete []
 - AJAX Add Picture without refesh []
