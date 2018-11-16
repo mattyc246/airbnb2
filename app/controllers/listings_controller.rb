@@ -41,6 +41,20 @@ class ListingsController < ApplicationController
 
   def destroy
 
+    listing = Listing.find(params[:id])
+
+    if listing.destroy
+
+      flash[:success] = "You have successfully removed this listing!"
+      redirect_to root_path
+
+    else
+
+      flash[:danger] = "Unable to remove this listing, please make sure you have the correct permissions!"
+      redirect_to listing_path(listing.id)
+
+    end
+
   end
 
   private

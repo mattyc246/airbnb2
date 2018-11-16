@@ -13,6 +13,7 @@ DONE
 - Create Reservation [x]
 - Show Reservation [x]
 - Delete User [x]
+- Delete Listing [x]
 
 TODO
 ==============================
@@ -21,7 +22,6 @@ TODO
 - User Validation []
 - Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
-- Delete Listing []
 - Update Listing []
 - Listing Tags []
 - Listing Validations []
