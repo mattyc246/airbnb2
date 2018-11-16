@@ -21,25 +21,25 @@ DONE
 IN PROGRESS
 ==============================
 
+- Edit User []
+- Update Listing []
 
 TODO
 ==============================
 
-- Edit User []
+- Delete Reservation []
+- Verify Listing []
 - User Validation []
+- Listing Validations []
+- Reservation Validations []
 - Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
-- Update Listing []
 - Listing Tags []
-- Listing Validations []
 - Database Seeding []
 - Pagination Of Listings []
 - User Authorization With Enum []
-- Verify Listing []
 - Uploading Images & Multiple Images []
 - Amazon S3 AWS Cloud Storage []
-- Delete Reservation []
-- Reservation Validations []
 - Braintree Payment Gateway []
 - Mailers []
 - Sidekiq []
