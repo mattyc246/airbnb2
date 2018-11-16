@@ -20,9 +20,15 @@
           </h5>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-1" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :full_name, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-1" class="card-body">
             <%= @user.full_name %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="1">Edit</button>
           </div>
         </div>
       </div>
@@ -35,9 +41,15 @@
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-2" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :email, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-2" class="card-body">
             <%= @user.email %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="2">Edit</button>
           </div>
         </div>
       </div>
@@ -50,9 +62,15 @@
           </h5>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-3" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :phone_number, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-3" class="card-body">
             <%= @user.phone_number %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="3">Edit</button>
           </div>
         </div>
       </div>
@@ -65,9 +83,15 @@
           </h5>
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-4" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :address_line1, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-4" class="card-body">
             <%= @user.address_line1 %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="4">Edit</button>
           </div>
         </div>
       </div>
@@ -80,9 +104,15 @@
           </h5>
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-5" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :city, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-5"class="card-body">
             <%= @user.city %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="5">Edit</button>
           </div>
         </div>
       </div>
@@ -95,9 +125,15 @@
           </h5>
         </div>
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-6" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :state, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-6" class="card-body d-none">
             <%= @user.state %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="6">Edit</button>
           </div>
         </div>
       </div>
@@ -110,9 +146,15 @@
           </h5>
         </div>
         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-7" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.text_field :postcode, class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-7" class="card-body">
             <%= @user.postcode %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="7">Edit</button>
           </div>
         </div>
       </div>
@@ -125,9 +167,15 @@
           </h5>
         </div>
         <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-          <div class="card-body">
+          <div id="edit-8" class="card-body d-none">
+            <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+              <%= f.select :country, options_for_select(User.country_list), class:"form-control" %>
+              <%= f.submit "Save Change", class:"btn btn-success btn-block mt-2" %>
+            <% end %>
+          </div>
+          <div id="show-8" class="card-body">
             <%= @user.country %>
-            <button type="button" class="btn btn-warning btn-block mt-2">Edit</button>
+            <button type="button" class="btn btn-warning btn-edit-user btn-block mt-2" value="8">Edit</button>
           </div>
         </div>
       </div>
