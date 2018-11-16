@@ -17,3 +17,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function(){
+  $('.btn-edit-user').click(function(e){
+    var value = e.target.value
+    $(`#show-${value}`).addClass('d-none').fadeOut(1000)
+    $(`#edit-${value}`).removeClass('d-none').delay(1000).fadeIn(1000)
+  })
+})
