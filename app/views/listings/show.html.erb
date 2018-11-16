@@ -50,6 +50,10 @@
         <h6 class="card-subtitle m-2">Reservations Hosted At This Listing: <%= @listing.reservations.count %></h6>
         <hr>
         <h4 class="card-subtitle mb-2 text-muted">Reviews:</h4>
+        <hr>
+        <div id="listing-reviews">
+          <%= render partial: 'reviews/review', collection: @listing.reviews %>
+        </div>
         <div class="accordion" id="accordionExample">
           <div class="card">
             <div class="card-header" id="headingOne">
@@ -62,7 +66,13 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <%= form_with url: listing_review_path(@listing.id), remote: true do |f| %>
+                <div class="field" >
+                  <%= f.label "Leave a Review:", class:"form-label" %>
+                  <%= f.text_area :review, class:'form-control' %>
+                  <%= f.submit 'Save Review', class:'btn btn-success m-2' %>
+                </div>
+                <% end %>
               </div>
             </div>
             <%= link_to "Delete Listing", listing_path(@listing.id), method: :delete, data: { confirm:"Are you sure you wish to remove your account? This will also remove all listings & reservations made by you!" }, class:"btn btn-danger btn-lg btn-block mt-2"  %>
