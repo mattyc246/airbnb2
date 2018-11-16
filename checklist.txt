@@ -12,12 +12,12 @@ DONE
 - Preview Image [x]
 - Create Reservation [x]
 - Show Reservation [x]
+- Delete User [x]
 
 TODO
 ==============================
 
 - Edit User []
-- Delete User []
 - User Validation []
 - Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
