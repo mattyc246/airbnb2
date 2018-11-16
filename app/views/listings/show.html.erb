@@ -75,6 +75,7 @@
                 <% end %>
               </div>
             </div>
+            <%= link_to "Edit Listing", edit_listing_path(@listing.id), class:"btn btn-warning btn-lg btn-block mt-2"  %>
             <%= link_to "Delete Listing", listing_path(@listing.id), method: :delete, data: { confirm:"Are you sure you wish to remove your account? This will also remove all listings & reservations made by you!" }, class:"btn btn-danger btn-lg btn-block mt-2"  %>
           </div>
         </div>

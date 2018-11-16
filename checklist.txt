@@ -16,12 +16,12 @@ DONE
 - Delete Listing [x]
 - Listing Reviews [x]
 - AJAX Submit Reviews [x]
+- Edit User [x]
 
 
 IN PROGRESS
 ==============================
 
-- Edit User []
 - Update Listing []
 
 TODO
