@@ -43,5 +43,6 @@ TODO
 - AJAX Autocomplete []
 - AJAX Add Picture without refesh []
 - AJAX Display Error Message without refresh on sign in []
+- AJAX Submit Reviews []
 - Deploy to Heroku []
 - Bootstrap & Make it pretty! []
