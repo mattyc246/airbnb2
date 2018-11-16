@@ -28,6 +28,20 @@ class UsersController < ApplicationController
 
   def destroy
 
+    user = User.find(params[:id])
+
+    if user.destroy
+
+      flash[:success] = "You have successfully removed your account with us!"
+      sign_out
+
+    else
+
+      flash[:danger] = "Unable to remove account, please check your privileges!"
+      redirect_to user_path(current_user.id)
+
+    end
+    
   end
 
 

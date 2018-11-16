@@ -1,17 +1,28 @@
 AirBnB Checklist:
 
-- User Authentication With Clearance [x]
+DONE
+==============================
+
 - User profile [x]
+- User Authentication With Clearance [x]
+- Create Listing [x]
+- Show Listing [x]
+- Listing Index [x]
+- Incorporate Carousel [x]
+- Preview Image [x]
+- Create Reservation [x]
+- Show Reservation [x]
+
+TODO
+==============================
+
 - Edit User []
 - Delete User []
 - User Validation []
 - Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
-- Create Listing [x]
-- Show Listing [x]
 - Delete Listing []
 - Update Listing []
-- Listing Index [x]
 - Listing Tags []
 - Listing Validations []
 - Listing Reviews []
@@ -21,10 +32,6 @@ AirBnB Checklist:
 - Verify Listing []
 - Uploading Images & Multiple Images []
 - Amazon S3 AWS Cloud Storage []
-- Incorporate Carousel [x]
-- Preview Image [x]
-- Create Reservation [x]
-- Show Reservation []
 - Delete Reservation []
 - Reservation Validations []
 - Braintree Payment Gateway []
