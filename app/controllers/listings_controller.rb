@@ -43,6 +43,20 @@ class ListingsController < ApplicationController
 
   def update
 
+    listing = Listing.find(params[:id])
+
+    if listing.update(listing_params)
+      
+      flash[:success] = "You have successfully updated the listing details"
+      redirect_to listing_path(listing.id)
+
+    else
+
+      flash[:danger] = "Unable to make the changes to this listing, please check your privileges"
+      redirect_to listing_path(listing.id)
+
+    end
+
   end
 
   def destroy
