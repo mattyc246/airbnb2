@@ -14,6 +14,13 @@ DONE
 - Show Reservation [x]
 - Delete User [x]
 - Delete Listing [x]
+- Listing Reviews [x]
+- AJAX Submit Reviews [x]
+
+
+IN PROGRESS
+==============================
+
 
 TODO
 ==============================
@@ -25,7 +32,6 @@ TODO
 - Update Listing []
 - Listing Tags []
 - Listing Validations []
-- Listing Reviews []
 - Database Seeding []
 - Pagination Of Listings []
 - User Authorization With Enum []
@@ -43,6 +49,5 @@ TODO
 - AJAX Autocomplete []
 - AJAX Add Picture without refesh []
 - AJAX Display Error Message without refresh on sign in []
-- AJAX Submit Reviews []
 - Deploy to Heroku []
 - Bootstrap & Make it pretty! []

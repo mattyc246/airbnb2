@@ -50,7 +50,10 @@
         <h6 class="card-subtitle m-2">Reservations Hosted At This Listing: <%= @listing.reservations.count %></h6>
         <hr>
         <h4 class="card-subtitle mb-2 text-muted">Reviews:</h4>
-        <%= render partial: 'reviews' %>
+        <hr>
+        <div id="listing-reviews">
+          <%= render partial: 'reviews/review', collection: @listing.reviews %>
+        </div>
         <div class="accordion" id="accordionExample">
           <div class="card">
             <div class="card-header" id="headingOne">
