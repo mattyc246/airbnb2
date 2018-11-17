@@ -27,6 +27,24 @@ class ReservationsController < ApplicationController
 
   end
 
+  def destroy
+
+    reservation = Reservation.find(params[:reservation_id])
+
+    if reservation.destroy
+
+      flash[:success] = "You have successfully cancelled your reservation"
+      redirect_to reservations_path
+
+    else
+
+      flash[:danger] = "Unable to cancel listing! Grace period expired!"
+      redirect_to reservations_path
+
+    end
+
+  end
+
   private
 
   def reservation_params

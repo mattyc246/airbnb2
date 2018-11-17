@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   end
 
   resources :listings do
-    resource :reservation, only: [:new, :create, :destroy]
+    resource :reservation, only: [:new, :create]
     resource :review, only:[:create, :destroy]
   end
 
   get '/reservations' => 'reservations#index', as: "reservations"
+  delete '/reservations/cancel' => 'reservations#destroy', as: "cancel_reservation"
 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
