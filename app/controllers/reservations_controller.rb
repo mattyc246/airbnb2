@@ -20,7 +20,7 @@ class ReservationsController < ApplicationController
 
     else
 
-      flash[:alert] = "You were unable to book! Reason: #{reservation.errors.message}"
+      flash[:danger] = "You were unable to book! Reason: blank for now"
       redirect_to listing_path(params[:listing_id])
 
     end

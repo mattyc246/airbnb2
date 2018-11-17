@@ -19,14 +19,15 @@ DONE
 - Edit User [x]
 - Update Listing [x]
 - Delete Reservation [x]
+- Listing Validations [x]
+- Reservation Validations [x]
+- User Validations [x]
+- Review Validations [x]
 
 
 IN PROGRESS
 ==============================
 
-- User Validations []
-- Listing Validations []
-- Reservation Validations []
 
 TODO
 ==============================
