@@ -15,11 +15,7 @@ class Reservation < ApplicationRecord
 
       if (self.check_in..self.check_out).overlaps?(res.check_in..res.check_out) && res != self
 
-        return true
-
-      else
-
-        return false
+        errors.add(:check_in, "This listing has already been booked on these dates!")
 
       end
 
