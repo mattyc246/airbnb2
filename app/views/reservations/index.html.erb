@@ -16,7 +16,7 @@
                   <li class="list-group-item">Check Out: <%= res.check_out %></li>
                   <li class="list-group-item">Guests <%= res.guests %></li>
                 </ul>
-                <%= link_to 'Cancel Reservation', listing_reservation_path(res.id), method: :delete, data: { confirm: "Are you sure you wish to cancel this reservation?" }, remote: true %>
+                <%= link_to 'Cancel Reservation', cancel_reservation_path(reservation_id: res.id), method: :delete, data: { confirm: "Are you sure you wish to cancel this reservation?" }, remote: true %>
               </div>
             </div>
           </div>
