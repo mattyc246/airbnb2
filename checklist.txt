@@ -30,12 +30,12 @@ DONE
 IN PROGRESS
 ==============================
 
+- Listing Tags []
 
 TODO
 ==============================
 
 - Google Login With OmniAuth2 []
-- Listing Tags []
 - Database Seeding []
 - Pagination Of Listings []
 - User Authorization With Enum []
