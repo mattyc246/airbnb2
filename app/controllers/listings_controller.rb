@@ -77,6 +77,18 @@ class ListingsController < ApplicationController
 
   end
 
+  def verify
+
+    listing = Listing.find(params[:id])
+
+    listing.verified = true
+
+    if listing.save
+      render :json => listing
+    end
+
+  end
+
   private
 
     def listing_params

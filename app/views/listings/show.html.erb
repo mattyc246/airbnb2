@@ -24,6 +24,9 @@
 
     <div class="card m-2" style="width: 50rem;">
       <div class="card-body">
+        <% if !@listing.verified? %>
+        <button id="verify-listing" value="<%= @listing.id %>" class="btn btn-outline-success float-right"><i class="far fa-check-circle"></i> Verify Listing</button>
+        <% end %>
         <h2 class="card-title"><%= @listing.title %></h2>
         <h6 class="card-subtitle mb-2 text-muted">Hosted By: <%= @listing.user.full_name %></h6>
         <hr>
@@ -33,6 +36,11 @@
           <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-shower"></i> <%= @listing.bathrooms %></button>
           <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-bed"></i> <%= @listing.bedrooms %></button>
           <button class="nav-item btn btn-outline-secondary m-1"><i class="fas fa-credit-card"></i> $<%= @listing.price_per_night %>.00 / P.P.P.N</button>
+          <% if @listing.verified? %>
+          <button id='verified' class="nav-item btn btn-outline-success m-1"><i class="far fa-check-circle"></i> Verified </button>
+          <% else %>
+          <button id='unverified' class="nav-item btn btn-outline-secondary m-1"><i class="far fa-times-circle"></i> Unverified </button>
+          <% end %>
         </nav>
         <hr>
         <h4 class="card-subtitle mb-2 text-muted">Details About This Listing:</h4>

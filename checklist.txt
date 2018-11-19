@@ -23,13 +23,13 @@ DONE
 - Reservation Validations [x]
 - User Validations [x]
 - Review Validations [x]
+- Verify Listing [x]
+- Privacy Protection With Figaro [x]
 
 
 IN PROGRESS
 ==============================
 
-- Verify Listing []
-- Privacy Protection With Figaro []
 
 TODO
 ==============================
