@@ -28,12 +28,12 @@ DONE
 IN PROGRESS
 ==============================
 
+- Verify Listing []
+- Privacy Protection With Figaro []
 
 TODO
 ==============================
 
-- Verify Listing []
-- Privacy Protection With Figaro []
 - Google Login With OmniAuth2 []
 - Listing Tags []
 - Database Seeding []
@@ -48,7 +48,7 @@ TODO
 - Multithreading With Sidekiq & Redis []
 - Search with multiple filters []
 - AJAX Autocomplete []
-- AJAX Add Picture without refesh []
+- AJAX Add Picture without refresh []
 - AJAX Display Error Message without refresh on sign in []
 - Deploy to Heroku []
 - Bootstrap & Make it pretty! []

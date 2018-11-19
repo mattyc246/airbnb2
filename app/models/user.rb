@@ -5,7 +5,8 @@ class User < ApplicationRecord
   has_many :reviews
 
   validates :email, presence: true, on: [:create]
-  validates :email. format: { with: /^.+@.+$/ }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :full_name, presence: true, on: [:create]
   validates :password, presence: true, on: [:create]
   validates :address_line1, presence: true, on: [:create]
