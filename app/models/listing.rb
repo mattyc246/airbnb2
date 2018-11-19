@@ -22,4 +22,10 @@ class Listing < ApplicationRecord
 
   end
 
+  private
+
+  def assign_tags
+    byebug
+  end
+
 end

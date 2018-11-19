@@ -21,6 +21,10 @@ class ListingsController < ApplicationController
     listing = Listing.new(listing_params)
     listing.user = current_user
 
+    if params[:tags]
+      listing.assign_tags
+    end
+
     if listing.save
 
       flash[:success] = "You have successfully created the listing #{listing.title}!"
