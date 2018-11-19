@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       only: [:create, :edit, :update]
   end
 
+  post "listings/:id/verify" => 'listings#verify', as: 'verify_listing'
+
   resources :listings do
     resource :reservation, only: [:new, :create]
     resource :review, only:[:create, :destroy]
