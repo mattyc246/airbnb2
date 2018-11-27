@@ -1,7 +1,7 @@
 class Listing < ApplicationRecord
   belongs_to :user
   has_many :reservations
-  has_many :tags
+  has_and_belongs_to_many :tags
   has_many :reviews
 
   validates :title, presence: true, on: [:create]
@@ -22,4 +22,22 @@ class Listing < ApplicationRecord
 
   end
 
+  def assign_tags(tags)
+    
+    tags_array = tags.split(',')
+
+    new_tags = []
+
+    tags_array.each do |tag|
+
+      new_tags << Tag.find_by(name: tag)
+
+    end
+
+    new_tags.each do |tag|
+      self.tags << tag
+    end
+
+  end
+  
 end
