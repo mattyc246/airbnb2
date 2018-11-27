@@ -20,13 +20,13 @@ class ListingsController < ApplicationController
 
     listing = Listing.new(listing_params)
     listing.user = current_user
-
-    if params[:tags]
-      listing.assign_tags
-    end
-
+    
+    # if params[:tags]
+    # end
+    
     if listing.save
-
+      
+      listing.assign_tags(params[:listing][:tags])
       flash[:success] = "You have successfully created the listing #{listing.title}!"
       redirect_to listing_path(listing.id)
 
@@ -97,7 +97,7 @@ class ListingsController < ApplicationController
 
     def listing_params
 
-      params.require(:listing).permit(:title, :property_type, :guests, :bedrooms, :bathrooms, :price_per_night, :address_line1, :city, :state, :country, :postcode,)
+      params.require(:listing).permit(:title, :property_type, :guests, :bedrooms, :bathrooms, :price_per_night, :address_line1, :city, :state, :country, :postcode)
 
     end
 

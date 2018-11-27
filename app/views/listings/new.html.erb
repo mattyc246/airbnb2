@@ -1,7 +1,7 @@
 <h1> Create a New Listing </h1>
 
 <%= form_with url: listings_path, scope: :listing, local: true do |f| %>
-    <%= f.hidden_field :tags %>
+    <%= f.hidden_field :tags, id:"tags-field" %>
   <div class="field" >
     <%= f.label :name %>
     <%= f.text_field :title %>
@@ -61,43 +61,43 @@
   <p> Choose all that apply! </p>
   <div class="field d-flex flex-wrap" >
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="customControlInline">
+      <input type="checkbox" class="custom-control-input" id="customControlInline" value="Swimming Pool">
       <label class="custom-control-label" for="customControlInline">Swimming Pool</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="laundry-tag">
+      <input type="checkbox" class="custom-control-input" id="laundry-tag" value="Laundry">
       <label class="custom-control-label" for="laundry-tag">Laundry</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="beach-access-tag">
+      <input type="checkbox" class="custom-control-input" id="beach-access-tag" value="Beach Access">
       <label class="custom-control-label" for="beach-access-tag">Beach Access</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="wifi-tag">
+      <input type="checkbox" class="custom-control-input" id="wifi-tag" value="Wifi">
       <label class="custom-control-label" for="wifi-tag">Wifi</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="minibar-tag">
+      <input type="checkbox" class="custom-control-input" id="minibar-tag" value="Minibar">
       <label class="custom-control-label" for="minibar-tag">Minibar</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="kitchen-utensils-tag">
+      <input type="checkbox" class="custom-control-input" id="kitchen-utensils-tag" value="Kitchen Utensils">
       <label class="custom-control-label" for="kitchen-utensils-tag">Kitchen Utensils</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="baby-cot-tag">
+      <input type="checkbox" class="custom-control-input" id="baby-cot-tag" value="Baby Cot">
       <label class="custom-control-label" for="baby-cot-tag">Baby Cot</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="smoke-free-tag">
+      <input type="checkbox" class="custom-control-input" id="smoke-free-tag" value="Smoke Free">
       <label class="custom-control-label" for="smoke-free-tag">Smoke Free</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="toiletries-tag">
+      <input type="checkbox" class="custom-control-input" id="toiletries-tag" value="Toiletries">
       <label class="custom-control-label" for="toiletries-tag">Toiletries</label>
     </div>
     <div class="custom-control custom-checkbox my-1 mr-sm-2">
-      <input type="checkbox" class="custom-control-input" id="tv-tag">
+      <input type="checkbox" class="custom-control-input" id="tv-tag" value="TV">
       <label class="custom-control-label" for="tv-tag">TV</label>
     </div>
   </div>

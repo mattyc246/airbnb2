@@ -21,4 +21,23 @@ $(document).on('turbolinks:load', function(){
     })
   })
 
+  var tags = []
+
+  $('.custom-control-input').click(function(e){
+    
+    if(tags.includes(e.target.value)){
+
+      var index = tags.indexOf(e.target.value)
+      tags.splice(index, 1)
+
+    } else {
+
+      tags.push(e.target.value)
+
+    }
+
+    $('#tags-field').val(tags)
+
+  })
+
 })
