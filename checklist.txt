@@ -25,12 +25,14 @@ DONE
 - Review Validations [x]
 - Verify Listing [x]
 - Privacy Protection With Figaro [x]
+- Listing Tags [x]
 
 
 IN PROGRESS
 ==============================
 
-- Listing Tags []
+- Search with multiple filters []
+- Search by tags
 
 TODO
 ==============================
@@ -46,7 +48,6 @@ TODO
 - Sidekiq []
 - Redis []
 - Multithreading With Sidekiq & Redis []
-- Search with multiple filters []
 - AJAX Autocomplete []
 - AJAX Add Picture without refresh []
 - AJAX Display Error Message without refresh on sign in []
