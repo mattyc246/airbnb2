@@ -31,22 +31,31 @@ User.all.each { |u| uids << u.id }
 
 ActiveRecord::Base.transaction do
   40.times do 
-    listing['name'] = Faker::App.name
-    listing['place_type'] = rand(1..3)
+    listing['title'] = Faker::App.name
     listing['property_type'] = ["House", "Entire Floor", "Condominium", "Villa", "Townhouse", "Castle", "Treehouse", "Igloo", "Yurt", "Cave", "Chalet", "Hut", "Tent", "Other"].sample
 
-    listing['room_number'] = rand(0..5)
-    listing['bed_number'] = rand(1..6)
-    listing['guest_number'] = rand(1..10)
+    listing['guests'] = rand(1..15)
+    listing['bedrooms'] = rand(1..5)
+    listing['bathrooms'] = rand(0..4)
 
-    listing['country'] = Faker::Address.country
-    listing['state'] = Faker::Address.state
+    listing['price_per_night'] = rand(20..999)
+
+    listing['address_line1'] = Faker::Address.street_address
     listing['city'] = Faker::Address.city
-    listing['zipcode'] = Faker::Address.zip_code
-    listing['address'] = Faker::Address.street_address
+    listing['state'] = Faker::Address.state
+    listing['postcode'] = Faker::Address.postcode
+    listing['country'] = Faker::Address.country
+    listing['tags'] = []
+    tags = ['Swimming Pool', 'Laundry', 'Beach Access', 'Wifi', 'Minibar', 'Kitchen Utensils', 'Baby Cot', 'Smoke Free', 'Toiletries', 'TV']
+    rand(1..4).times do
 
-    listing['price'] = rand(80..500)
-    listing['description'] = Faker::Hipster.sentence
+      new_tag = tags.sample
+      tag = Tag.find_by(name: new_tag)
+      listing['tags'] << tag
+      tags.delete(new_tag)
+
+    end
+    # listing['description'] = Faker::Hipster.sentence
 
     listing['user_id'] = uids.sample
 
