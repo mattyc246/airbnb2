@@ -27,19 +27,19 @@ DONE
 - Privacy Protection With Figaro [x]
 - Listing Tags [x]
 - Google Login With OmniAuth2 [x]
+- Database Seeding [x]
 
 
 IN PROGRESS
 ==============================
 
-- Database Seeding []
+- Uploading Images & Multiple Images []
 
 TODO
 ==============================
 
 - Pagination Of Listings []
 - User Authorization With Enum []
-- Uploading Images & Multiple Images []
 - Amazon S3 AWS Cloud Storage []
 - Braintree Payment Gateway []
 - Mailers []
