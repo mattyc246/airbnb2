@@ -26,12 +26,12 @@ DONE
 - Verify Listing [x]
 - Privacy Protection With Figaro [x]
 - Listing Tags [x]
+- Google Login With OmniAuth2 [x]
 
 
 IN PROGRESS
 ==============================
 
-- Google Login With OmniAuth2 []
 
 TODO
 ==============================
