@@ -7,18 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # Seed Users
 user = {}
-user['password'] = 'asdf'
-user['password_confirmation'] = 'asdf'
+user['password'] = 'abcde12345'
 
 ActiveRecord::Base.transaction do
   20.times do 
     user['full_name'] = Faker::Name.name 
-    user['last_name'] = Faker::Name.last_name
     user['email'] = Faker::Internet.email
-    user['gender'] = rand(1..2)
-    user['phone'] = Faker::PhoneNumber.phone_number
+    user['address_line1'] = Faker::Address.street_address
+    user['city'] = Faker::Address.city
+    user['state'] = Faker::Address.state
+    user['postcode'] = Faker::Address.postcode
     user['country'] = Faker::Address.country
-    user['birthdate'] = Faker::Date.between(50.years.ago, Date.today)
+    user['phone_number'] = Faker::PhoneNumber.phone_number
 
     User.create(user)
   end
