@@ -1,20 +1,16 @@
 class User < ApplicationRecord
   include Clearance::User
-  has_many :listings
-  has_many :reservations
-  has_many :reviews
+  has_many :listings, dependent: :destroy
+  has_many :reservations, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :authentications, dependent: :destroy
 
   validates :email, presence: true, on: [:create]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :full_name, presence: true, on: [:create]
   validates :password, presence: true, on: [:create]
-  validates :address_line1, presence: true, on: [:create]
-  validates :city, presence: true, on: [:create]
-  validates :state, presence: true, on: [:create]
-  validates :postcode, presence: true, on: [:create]
-  validates :country, presence: true, on: [:create]
-  validates :phone_number, presence: true, on: [:create]
+
 
   def self.country_list
 
@@ -51,5 +47,20 @@ class User < ApplicationRecord
      "Uruguay","Uzbekistan","Vanuatu","Venezuela","Viet Nam","Virgin Islands, British","Virgin Islands, U.S.",
      "Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"]
 
+  end
+
+  def self.create_with_auth_and_hash(authentication, auth_hash)
+    user = self.create!(
+     full_name: auth_hash["info"]["name"],
+     email: auth_hash["info"]["email"],
+     password: SecureRandom.hex(10)
+    )
+    user.authentications << authentication
+    return user
+  end
+
+  def google_token
+    x = self.authentications.find_by(provider: 'google_oauth2')
+    return x.token unless x.nil?
   end
 end

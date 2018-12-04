@@ -31,13 +31,11 @@ DONE
 IN PROGRESS
 ==============================
 
-- Search with multiple filters []
-- Search by tags
+- Google Login With OmniAuth2 []
 
 TODO
 ==============================
 
-- Google Login With OmniAuth2 []
 - Database Seeding []
 - Pagination Of Listings []
 - User Authorization With Enum []
@@ -48,6 +46,8 @@ TODO
 - Sidekiq []
 - Redis []
 - Multithreading With Sidekiq & Redis []
+- Search with multiple filters []
+- Search by tags []
 - AJAX Autocomplete []
 - AJAX Add Picture without refresh []
 - AJAX Display Error Message without refresh on sign in []
