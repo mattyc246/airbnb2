@@ -32,11 +32,11 @@ DONE
 IN PROGRESS
 ==============================
 
+- Database Seeding []
 
 TODO
 ==============================
 
-- Database Seeding []
 - Pagination Of Listings []
 - User Authorization With Enum []
 - Uploading Images & Multiple Images []
