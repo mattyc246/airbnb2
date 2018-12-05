@@ -28,17 +28,17 @@ DONE
 - Listing Tags [x]
 - Google Login With OmniAuth2 [x]
 - Database Seeding [x]
+- Uploading Images & Multiple Images [x]
 
 
 IN PROGRESS
 ==============================
 
-- Uploading Images & Multiple Images []
+- Pagination Of Listings []
 
 TODO
 ==============================
 
-- Pagination Of Listings []
 - User Authorization With Enum []
 - Amazon S3 AWS Cloud Storage []
 - Braintree Payment Gateway []
