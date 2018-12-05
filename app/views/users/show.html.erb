@@ -4,8 +4,15 @@
       <h2><%= @user.full_name %></h2>
     </div>
     <div class="card-body">
-      <img class="card-img-top w-25 m-2 rounded-circle" src="https://i0.wp.com/hifadhiafrica.org/wp-content/uploads/2017/01/default-placeholder.png" alt="Profile Photo"></br>
-      <a href="#" class="btn btn-primary">Change Profile Photo</a>
+      <% if @user.photo %>
+        <%= image_tag(@user.photo.url, class:"card-img-top w-25 m-2 rounded-circle") %>
+        </br>
+      <% else %>
+        <img class="card-img-top w-25 m-2 rounded-circle" src="https://i0.wp.com/hifadhiafrica.org/wp-content/uploads/2017/01/default-placeholder.png" alt="Profile Photo"></br>
+      <% end %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Change Profile Photo
+      </button>
     </div>
     <div class="card-footer">
       <h5 class="card-title m-2">User Details:</h5>
@@ -181,5 +188,29 @@
       </div>
     </div>
     <%= link_to "Delete Account", user_path(@user.id), method: :delete, data: { confirm:"Are you sure you wish to remove your account? This will also remove all listings & reservations made by you!" }, class:"btn btn-danger btn-lg btn-block mt-2"  %>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <%= form_with scope: :user, url: user_path(@user.id), method: :patch, local: true do |f| %>
+            <%= f.file_field :photo, class:"form-control" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= f.submit "Save Change", class:"btn btn-success" %>
+      <% end %>
+      </div>
+    </div>
   </div>
 </div>
