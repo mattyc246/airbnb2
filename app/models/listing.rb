@@ -3,6 +3,7 @@ class Listing < ApplicationRecord
   has_many :reservations
   has_and_belongs_to_many :tags
   has_many :reviews
+  mount_uploaders :photos, PhotoUploader
 
   validates :title, presence: true, on: [:create]
   validates :property_type, presence: true, on: [:create]
