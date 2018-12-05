@@ -29,12 +29,12 @@ DONE
 - Google Login With OmniAuth2 [x]
 - Database Seeding [x]
 - Uploading Images & Multiple Images [x]
+- Pagination Of Listings [x]
 
 
 IN PROGRESS
 ==============================
 
-- Pagination Of Listings []
 
 TODO
 ==============================

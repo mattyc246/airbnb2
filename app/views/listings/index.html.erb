@@ -39,4 +39,7 @@
       </div>
     <% end %>
   </div>
+  <div class="w-100 mx-auto d-block">
+    <%= will_paginate(@listings, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination justify-content-center') %>
+  </div>
 </div>
