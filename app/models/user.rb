@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include Clearance::User
+  mount_uploader :photo, PhotoUploader
   has_many :listings, dependent: :destroy
   has_many :reservations, dependent: :destroy
   has_many :reviews, dependent: :destroy
