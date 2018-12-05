@@ -4,6 +4,7 @@ class Listing < ApplicationRecord
   has_and_belongs_to_many :tags
   has_many :reviews
   mount_uploaders :photos, PhotoUploader
+  self.per_page = 12
 
   validates :title, presence: true, on: [:create]
   validates :property_type, presence: true, on: [:create]
